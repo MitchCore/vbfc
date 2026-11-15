@@ -1,0 +1,12 @@
+name: Generate YouTube PO Token
+
+on:
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+jobs:
+  generate-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run YouTube Trusted Session Generator
+        run: |
+          docker run --rm ghcr.io/imputnet/yt-session-generator
